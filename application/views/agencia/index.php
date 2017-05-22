@@ -1,4 +1,4 @@
-    <?php $this->load->view('cliente/commons/header'); ?>
+    <?php $this->load->view('commons/section/header'); ?>
     <!--/.Double navigation-->
 
     <!--Main layout-->

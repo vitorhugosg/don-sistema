@@ -3,6 +3,8 @@
         $data = array();
         //titulo da página
         $data['tituloPagina'] = $tituloPagina;
+        $data['subTituloPagina'] = $subTituloPagina;
+        $data['nivel'] = $nivel;
     
     ?>
     

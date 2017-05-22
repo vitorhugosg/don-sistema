@@ -78,8 +78,8 @@
             
             <!-- Breadcrumb-->
             <ol class="breadcrumb hidden-lg-down">
-                <li class="breadcrumb-item active"><a href="#"> <?php echo $tituloPagina; ?></a></li>
-                <li class="breadcrumb-item active">Dashboard V.2</li>
+                <li class="breadcrumb-item active"><a href="<?php if($nivel == '0'): echo base_url('cliente/') ;else: echo base_url('agencia/'); endif;?>"> <?php echo $tituloPagina; ?></a></li>
+                <li class="breadcrumb-item active"><?php echo $subTituloPagina;?></li>
             </ol>
             
             <!--Navbar links-->
