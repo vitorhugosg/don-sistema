@@ -13,7 +13,9 @@ class Usuarios_model extends CI_Model {
 		if ($usuarios->num_rows()) {
 			//retornando usuario
 			$usuario = $usuarios->result_array();
+			
 			return $usuario[0];
+			
 		}else{
 			return false;
 		}

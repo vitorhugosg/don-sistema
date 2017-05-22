@@ -37,21 +37,39 @@ class Login extends CI_Controller {
 				$login_exists = $this->Usuarios_model->check_login($email,$senha);
 				if ($login_exists) {
 					//loggin autorizado
+					//destinguindo login usuario e clinte
+					if($login_exists['nivel'] == '0'){
+						$usuario = $login_exists;
 
-					$usuario = $login_exists;
+						//CRIANDO SESSÃO - configura os dados da sessão
+						$login = array(
+							'created'  => $usuario['created'],
+							'email'     => $usuario['email'],
+							'logado' => TRUE
+							);
 
-					//CRIANDO SESSÃO - configura os dados da sessão
-					$login = array(
-						'created'  => $usuario['created'],
-						'email'     => $usuario['email'],
-						'logado' => TRUE
-						);
+						$this->session->set_userdata($login);
 
-					$this->session->set_userdata($login);
+						//enviar para login restrito
 
-					//enviar para login restrito
+						redirect(base_url('cliente/'));
+					}else if($login_exists['nivel'] == '1'){
+						$usuario = $login_exists;
 
-					redirect(base_url('agencia/'));
+						//CRIANDO SESSÃO - configura os dados da sessão
+						$login = array(
+							'created'  => $usuario['created'],
+							'email'     => $usuario['email'],
+							'logado' => TRUE
+							);
+
+						$this->session->set_userdata($login);
+
+						//enviar para login restrito
+
+						redirect(base_url('agencia/'));
+					}
+					
 
 				}else{
 					$alerta = array(

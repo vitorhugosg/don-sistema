@@ -78,7 +78,7 @@
             
             <!-- Breadcrumb-->
             <ol class="breadcrumb hidden-lg-down">
-                <li class="breadcrumb-item active"><a href="#">Dashboards</a></li>
+                <li class="breadcrumb-item active"><a href="#"> <?php echo $tituloPagina; ?></a></li>
                 <li class="breadcrumb-item active">Dashboard V.2</li>
             </ol>
             

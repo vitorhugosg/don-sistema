@@ -1,4 +1,13 @@
-    <?php $this->load->view('cliente/commons/header'); ?>
+    <?php 
+        //pegando informações que vem do controller e jogando na variável $data pra mandar pro header.
+        $data = array();
+        //titulo da página
+        $data['tituloPagina'] = $tituloPagina;
+    
+    ?>
+    
+    
+    <?php $this->load->view('commons/section/header', $data); ?>
     <!--/.Double navigation-->
 
     <!--Main layout-->

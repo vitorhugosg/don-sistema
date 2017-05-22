@@ -16,8 +16,6 @@ class Base extends CI_Controller {
 	}
 	public function index(){
 		
-
-		
 		$helper = $this->fb->getRedirectLoginHelper();
 		$permissions = ['email'];
 		$loginUrl = $helper->getLoginUrl('http://localhost/ci/base/logado', $permissions);
