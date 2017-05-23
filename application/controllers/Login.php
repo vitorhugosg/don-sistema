@@ -16,6 +16,7 @@ class Login extends CI_Controller {
 		if ($this->input->post('entrar') == 'entrar') {
 			//segurança no captcha
 			if ($this->input->post('captcha')) redirect('conta/entrar');
+
 			//utilizando form-validation
 			//primeiro parametro e o name do input
 			//segundo o que vai aparecer
@@ -23,11 +24,14 @@ class Login extends CI_Controller {
 			$this->form_validation->set_rules('email','EMAIL','required|valid_email');
 			$this->form_validation->set_rules('senha','SENHA','required|min_length[6]|max_length[20]'); 
 			//rodando form validation
+
 			if ($this->form_validation->run() === TRUE) {
 				//PARTIR PARA QUANDO FORMULÁRIO FOI VALIDADE
 				//carregando model usuarios
 				$this->load->model("Usuarios_model");
+
 				$email = $this->input->post('email');
+
 				$senha = $this->input->post('senha');
 				//chamando função que vai fazer loggin
 				$login_exists = $this->Usuarios_model->check_login($email,$senha);
@@ -36,29 +40,39 @@ class Login extends CI_Controller {
 					//destinguindo login usuario e clinte
 					if($login_exists['nivel'] == '0'){
 						$usuario = $login_exists;
+
 						//CRIANDO SESSÃO - configura os dados da sessão
 						$login = array(
 							'created'  => $usuario['created'],
 							'email'     => $usuario['email'],
 							'logado' => TRUE,
-							'nivel' => $usuario['nivel']
+							'nivelUsuario' => $login_exists['nivel']
 							);
+
 						$this->session->set_userdata($login);
+
 						//enviar para login restrito
+
 						redirect(base_url('cliente/'));
 					}else if($login_exists['nivel'] == '1'){
 						$usuario = $login_exists;
+
 						//CRIANDO SESSÃO - configura os dados da sessão
 						$login = array(
 							'created'  => $usuario['created'],
 							'email'     => $usuario['email'],
 							'logado' => TRUE,
-							'nivel' => $usuario['nivel']
+							'nivelUsuario' => $login_exists['nivel']
 							);
+
 						$this->session->set_userdata($login);
+
 						//enviar para login restrito
+
 						redirect(base_url('agencia/'));
 					}
+					
+
 				}else{
 					$alerta = array(
 						"class" => "danger",

@@ -44,35 +44,11 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="<?php echo base_url('assets/dashboard'); ?>/js/mdb.min.js"></script>
 
-    <script>
-        $(function() {
-            $('.min-chart#chart-sales').easyPieChart({
-                barColor: "#4caf50",
-                onStep: function(from, to, percent) {
-                    $(this.el).find('.percent').text(Math.round(percent));
-                }
-            });
-        });
-    </script>
+    <script type="text/javascript" src="<?php echo base_url('assets/dashboard'); ?>/js/vendor/tinymce/tinymce.min.js"></script>
 
-    <script>
-        $(".button-collapse").sideNav();
+    <script type="text/javascript" src="<?php echo base_url('assets/dashboard'); ?>/js/scripts.js"></script>
+  
 
-        // Data Picker Initialization
-        $('.datepicker').pickadate();
-
-
-        // Material Select Initialization
-        $(document).ready(function() {
-            $('.mdb-select').material_select();
-        });
-
-
-        // Tooltips Initialization
-        $(function() {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
 
 
 </body>

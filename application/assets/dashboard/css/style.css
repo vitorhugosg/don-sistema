@@ -4,3 +4,8 @@
 	height: 100% !important;
 }
 
+.card-block .card-exp{
+	font-size: 0.8em;
+	color: #ccc;
+	margin-bottom: 0px !important;
+}
