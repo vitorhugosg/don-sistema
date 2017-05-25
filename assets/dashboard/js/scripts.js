@@ -35,7 +35,16 @@ $( document ).ready(function() {
 	// TinyMCE Initialization
 	tinymce.init({ selector:'#post_content', menubar: false, height : "270" });
 
+	//Formalizando tags input
+	$(".tags").tagsinput('items');
+	
+
+
+
 });
 $(".button-collapse").sideNav();
 var el = document.querySelector('.custom-scrollbar');
 Ps.initialize(el);
+
+
+

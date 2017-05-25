@@ -40,17 +40,14 @@ class Login extends CI_Controller {
 					//destinguindo login usuario e clinte
 					if($login_exists['nivel'] == '0'){
 						$usuario = $login_exists;
-
 						//CRIANDO SESSÃO - configura os dados da sessão
 						$login = array(
-							'created'  => $usuario['created'],
+							'data'  => $usuario['data'],
 							'email'     => $usuario['email'],
 							'logado' => TRUE,
 							'nivelUsuario' => $login_exists['nivel']
 							);
-
-						$this->session->set_userdata($login);
-
+						$_SESSION['usuario'] = $login_exists;
 						//enviar para login restrito
 
 						redirect(base_url('cliente/'));
@@ -59,14 +56,12 @@ class Login extends CI_Controller {
 
 						//CRIANDO SESSÃO - configura os dados da sessão
 						$login = array(
-							'created'  => $usuario['created'],
+							'created'  => $usuario['data'],
 							'email'     => $usuario['email'],
 							'logado' => TRUE,
 							'nivelUsuario' => $login_exists['nivel']
 							);
-
-						$this->session->set_userdata($login);
-
+						$_SESSION['usuario'] = $login_exists;
 						//enviar para login restrito
 
 						redirect(base_url('agencia/'));

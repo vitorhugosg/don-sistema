@@ -17,6 +17,9 @@
 
     <!-- Material Design Bootstrap -->
     <link href="<?php echo base_url('assets/dashboard'); ?>/css/mdb.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css">
+    <!-- DROPZONE.css-->
+    <link href="<?php echo base_url('assets/dashboard'); ?>/css/dropzone.css" rel="stylesheet">
 
     <!-- Your custom styles (optional) -->
     <link href="<?php echo base_url('assets/dashboard'); ?>/css/style.css" rel="stylesheet">
@@ -37,6 +40,8 @@
 
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="<?php echo base_url('assets/dashboard'); ?>/js/tether.min.js"></script>
+    <!-- DROPZONE -->
+    <script type="text/javascript" src="<?php echo base_url('assets/dashboard'); ?>/js/dropzone.js"></script>
 
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="<?php echo base_url('assets/dashboard'); ?>/js/bootstrap.min.js"></script>
@@ -45,6 +50,7 @@
     <script type="text/javascript" src="<?php echo base_url('assets/dashboard'); ?>/js/mdb.min.js"></script>
 
     <script type="text/javascript" src="<?php echo base_url('assets/dashboard'); ?>/js/vendor/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>
 
     <script type="text/javascript" src="<?php echo base_url('assets/dashboard'); ?>/js/scripts.js"></script>
   

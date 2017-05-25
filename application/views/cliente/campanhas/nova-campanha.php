@@ -116,6 +116,11 @@
                                     <input type="checkbox" id="color-5">
                                     <label for="color-5">Outdores</label>
                                 </fieldset>
+                                <div class="md-form mb-0">
+                                    <p>Outros Veículos</p>
+                                    <textarea type="text" id="veicular" class=" tags" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput"></textarea>
+                                    
+                                </div>
                             </div>
                             <!--/.Card content-->
                         </div>
@@ -130,13 +135,10 @@
                             <!--/Card image-->
                             <!--Card content-->
                             <div class="card-block">
-                                <p><i class="fa fa-flag mr-1" aria-hidden="true"></i> Status: <strong>Draft</strong></p>
-                                <p><i class="fa fa-eye mr-1" aria-hidden="true"></i> Visibility <strong>Public</strong></p>
-                                <p><i class="fa fa-archive mr-1 mr-1" aria-hidden="true"></i> Revisions: <strong>2</strong></p>
-                                <p><i class="fa fa-calendar mr-1" aria-hidden="true"></i> Publish: <strong>Immediately</strong></p>
+
                                 <div class="text-right">
-                                    <button class="btn-flat waves-effect">Discard</button>
-                                    <button class="btn btn-primary">Publish</button>
+                                    <button class="btn btn-warner waves-effect">Rascunho</button>
+                                    <button class="btn btn-primary">Enviar</button>
                                 </div>
                             </div>
                             <!--/.Card content-->

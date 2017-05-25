@@ -4,3 +4,29 @@
 	height: 100% !important;
 }
 
+.card-block .card-exp{
+	font-size: 0.8em;
+	color: #ccc;
+	margin-bottom: 0px !important;
+}
+
+.tags{
+	color: #ccc;
+}
+
+.bootstrap-tagsinput .tag {
+    margin-right: 2px;
+    color: white;
+    background: #4285F4;
+    padding: 4px;
+    border-radius: 3px;
+
+}
+.bootstrap-tagsinput{
+	line-height: 32px;
+    width: 100%;
+}
+
+.ncperguntas .card.pergunta-card{
+	margin: 20px;
+}

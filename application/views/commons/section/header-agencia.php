@@ -16,28 +16,29 @@
      <ul class="collapsible collapsible-accordion">
 
        <li>
-         <a href="<?php echo base_url('cliente/') ?>" class="collapsible-header waves-effect arrow-r"></i> <i class="fa fa-code"></i> Ínicio</a>
+         <a href="<?php echo base_url(). urlDashUser($usuario['nivel']); ?>" class="collapsible-header waves-effect arrow-r"></i> <i class="fa fa-code"></i> Ínicio</a>
        </li>
 
 
-       <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-bar-chart"></i> Campanhas<i class="fa fa-angle-down rotate-icon"></i></a>
+       <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-bar-chart"></i> Clientes<i class="fa fa-angle-down rotate-icon"></i></a>
          <div class="collapsible-body">
            <ul>
              <li>
-               <a href="<?php echo base_url('cliente/novacampanha'); ?>" class="waves-effect">- Nova Campanha</a>
+               <a href="<?php echo base_url('agencia/novacampanha'); ?>" class="waves-effect">- Novo Cliente</a>
              </li>
            </ul>
          </div>
        </li>
-
+      <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-bar-chart"></i> Ferramenta<i class="fa fa-angle-down rotate-icon"></i></a>
+         <div class="collapsible-body">
+           <ul>
+             <li>
+               <a href="<?php echo base_url('agencia/ncperguntas'); ?>" class="waves-effect">- NC Perguntas</a>
+             </li>
+           </ul>
+         </div>
+       </li>
        <li>
-        <a href="invoice.html" class="collapsible-header waves-effect arrow-r"><i class="fa fa-money"></i> Investimento</a>
-      </li>
-      <li>
-
-      <a href="support.html" class="collapsible-header waves-effect arrow-r"><i class="fa fa-support"></i> Dúvidas</a>
-      </li>
-      <li>
         <a href="faq.html" class="collapsible-header waves-effect arrow-r"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a>
       </li>
     </ul>
@@ -73,7 +74,7 @@
        <i class="fa fa-user"></i> <span class="hidden-sm-down">Conta</span>
      </a>
      <div class="dropdown-menu dropdown-ins dropdown-menu-right" aria-labelledby="userDropdown">
-       <a class="dropdown-item" href="<?php echo base_url(). urlDashUser($usuario['nivel']); ?>logout">Deslogar</a>
+       <a class="dropdown-item" href="<?php echo base_url(). urlDashUser($usuario['nivel']); ?>/logout">Deslogar</a>
        <a class="dropdown-item" href="#">Minhas Informações</a>
      </div>
    </li>
